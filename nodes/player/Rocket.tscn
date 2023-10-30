@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt3ebwexg84c4"]
+
+[ext_resource type="Script" path="res://nodes/player/Rocket.gd" id="1_771i5"]
+[ext_resource type="Texture2D" uid="uid://8gexojhenkdj" path="res://art/space_saturnV_rocket_apollo11.png" id="1_xu6a1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rm00n"]
+radius = 2.0
+height = 62.0
+
+[node name="Rocket" type="Area2D"]
+script = ExtResource("1_771i5")
+
+[node name="SpaceSaturnVRocketApollo11" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_xu6a1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_rm00n")
